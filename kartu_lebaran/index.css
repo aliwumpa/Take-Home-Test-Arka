@@ -1,0 +1,59 @@
+body {
+  background-color: #ffff99;
+  font-family: "Pacifico", cursive;
+}
+
+p {
+  position: relative;
+  font-size: 28px;
+}
+
+.kartu-lebaran__wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.kartu-lebaran__ketupat {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(-webkit-min-content, -webkit-max-content) 5px minmax(-webkit-min-content, -webkit-max-content) 5px minmax(-webkit-min-content, -webkit-max-content);
+  -ms-grid-columns: minmax(min-content, max-content) 5px minmax(min-content, max-content) 5px minmax(min-content, max-content);
+  grid-template-columns: repeat(3, minmax(-webkit-min-content, -webkit-max-content));
+  grid-template-columns: repeat(3, minmax(min-content, max-content));
+  row-gap: 5px;
+  -webkit-column-gap: 5px;
+     -moz-column-gap: 5px;
+          column-gap: 5px;
+  left: 50%;
+  -webkit-transform: translateX(-38%) rotate(45deg);
+          transform: translateX(-38%) rotate(45deg);
+}
+.kartu-lebaran__ketupat-kotak {
+  width: 80px;
+  height: 80px;
+}
+.kartu-lebaran__ketupat-kotak:nth-child(odd) {
+  background-color: #00b300;
+}
+.kartu-lebaran__ketupat-kotak:nth-child(even) {
+  background-color: #59b300;
+}
+.kartu-lebaran__ucapan {
+  text-align: center;
+  margin-top: 100px;
+}
+.kartu-lebaran__ucapan p:first-child::before {
+  content: ".:";
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+}
+.kartu-lebaran__ucapan p:first-child::after {
+  content: ":.";
+  position: absolute;
+  bottom: 0;
+  right: -10px;
+}

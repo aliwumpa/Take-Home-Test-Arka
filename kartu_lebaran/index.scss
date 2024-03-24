@@ -1,0 +1,64 @@
+body {
+    background-color:#ffff99;
+    font-family: 'Pacifico', cursive;;
+}
+
+p {
+    position: relative;
+    font-size: 28px;
+}
+
+.kartu-lebaran {
+    &__wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__ketupat {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(min-content, max-content));;
+        row-gap: 5px;
+        column-gap: 5px;
+        left: 50%;
+        transform: translateX(-38%) rotate(45deg);
+
+        &-kotak {
+            width: 80px;
+            height: 80px;
+
+            &:nth-child(odd) {
+                background-color: #00b300;
+            }
+
+            &:nth-child(even) {
+                background-color: #59b300;
+            }
+        }
+    }
+
+    &__ucapan {
+        text-align: center;
+        margin-top: 100px;
+
+        p {
+            &:first-child {
+                &::before {
+                    content: '.:';
+                    position: absolute;
+                    bottom: 0;
+                    left: -10px;
+                }
+
+                &::after {
+                    content: ':.';
+                    position: absolute;
+                    bottom: 0;
+                    right: -10px;
+                }
+            }
+        }
+    }
+}
