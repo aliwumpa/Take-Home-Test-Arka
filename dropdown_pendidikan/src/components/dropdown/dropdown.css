@@ -1,0 +1,63 @@
+.dropdown__wrapper {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1020px;
+    padding: 15px;
+}
+
+.jenjang__wrapper {
+    margin-right: 20px;
+    width: 100%;
+}
+
+.tingkatan__wrapper {
+    width: 100%;
+}
+
+.jenjang__wrapper select {
+    background-color: green;
+}
+
+.tingkatan__wrapper select {
+    background-color: red;
+}
+
+.jenjang__wrapper select,.tingkatan__wrapper select {
+    width: 100%;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+}
+
+.tingkatan__wrapper select option[value="selected jenjang"][disabled] {
+    color: gray !important;
+}
+
+.jenjang__wrapper select option:nth-child(odd),.tingkatan__wrapper select option:nth-child(odd) {
+    background-color: white;
+    color: black;
+}
+
+.jenjang__wrapper select option:nth-child(even),.tingkatan__wrapper select option:nth-child(even) {
+    background-color: white;
+    color: black;
+}
+
+.jenjang__wrapper select option::selection, .tingkatan__wrapper select option::selection {
+    background-color: lightgray !important;
+}
+
+.jenjang__wrapper select option:hover, .tingkatan__wrapper select option:hover {
+    background-color: lightgray !important;
+}
+
+.tingkatan__wrapper select option[value="placeholder"][disabled] {
+    display: none;
+}
